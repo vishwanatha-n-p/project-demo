@@ -2,3 +2,12 @@ Bundle-Name: shopping-web
 Bundle-SymbolicName: com.web.project.demo
 Bundle-Version: 1.0.0
 Export-Package: com.web.project.demo.constants
+
+Import-Package: \
+    !com.project.demo.exception.*,\
+    !com.project.demo.model.*,\
+    !com.project.demo.service.persistence.*,\
+    !com.project.demo.service.*,\
+    !com.project.demo.model.impl.*,\
+    !com.project.demo.service.impl.*,\
+    *
