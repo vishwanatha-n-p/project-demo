@@ -1,0 +1,10 @@
+dependencies {
+	compile project(":modules:shopping:shopping-api")
+
+}
+
+buildService {
+	apiDir = "../shopping-api/src/main/java"
+}
+
+group = "com.project.demo"

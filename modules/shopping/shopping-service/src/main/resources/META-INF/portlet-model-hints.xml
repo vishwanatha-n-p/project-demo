@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.project.demo.model.Product">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="productName" type="String" />
+		<field name="color" type="String" />
+		<field name="ratingCount" type="long" />
+		<field name="rating" type="double" />
+		<field name="price" type="long" />
+		<field name="discount" type="int" />
+		<field name="finalPrice" type="long" />
+		<field name="gender" type="String" />
+		<field name="productCount" type="int" />
+		<field name="status" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

@@ -1,0 +1,10 @@
+Bundle-Name: shopping-api
+Bundle-SymbolicName: com.project.demo.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.project.demo.exception,\
+	com.project.demo.model,\
+	com.project.demo.service,\
+	com.project.demo.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../shopping-service/service.xml

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_1_0.dtd">
+
+<service-builder  package-path="com.project.demo">
+	<namespace>Shopping</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Product" remote-service="true" uuid="true">
+
+		<column name="id" primary="true" type="long" />
+		<column name="productName" type="String" />
+		<column name="color" type="String" />
+		<column name="ratingCount" type="long" />
+		<column name="rating" type="double" />
+		<column name="price" type="long" />
+		<column name="discount" type="int" />
+		<column name="finalPrice" type="long" />
+		<column name="gender" type="String" />
+		<column name="productCount" type="int" />
+		<column name="status" type="int" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder return-type="Product" name="ProductDetails">
+			<finder-column name="productName"/>
+			<finder-column name="color"/>
+			<finder-column name="gender"/>
+		</finder>
+
+	</entity>
+</service-builder>
