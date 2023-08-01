@@ -11,3 +11,10 @@ Import-Package: \
     !com.project.demo.model.impl.*,\
     !com.project.demo.service.impl.*,\
     *
+
+Import-Service: \
+    !com.project.demo.exception.*,\
+    !com.project.demo.model.*,\
+    !com.project.demo.service.persistence.*,\
+    !com.project.demo.service.*,\
+    *

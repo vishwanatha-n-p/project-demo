@@ -1,6 +1,20 @@
 dependencies {
+	implementation project(path: ':modules:shopping:shopping-api')
 	compileOnly project(":modules:shopping:shopping-api")
 
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bnd.annotation", version: '6.4.0'
+	compileOnly group: "com.liferay", name: "com.liferay.petra.io"
+	compileOnly group: "com.liferay", name: "com.liferay.petra.string"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender.api"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "org.osgi", name: "org.osgi.core"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+
+	compileOnly group: "javax.portlet", name: "portlet-api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api"
+
+	compileOnly 'com.liferay.portal:com.liferay.portal.kernel'
+	compileOnly 'com.liferay.portal:com.liferay.portal.kernel'
 }
 
 buildService {

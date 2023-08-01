@@ -4,7 +4,8 @@ Bundle-Version: 1.0.0
 Export-Package:\
 	com.project.demo.exception,\
 	com.project.demo.model,\
-	com.project.demo.service,\
-	com.project.demo.service.persistence
+	com.project.demo.service.persistence,\
+	com.project.demo.service
+
 -check: EXPORTS
 -includeresource: META-INF/service.xml=../shopping-service/service.xml

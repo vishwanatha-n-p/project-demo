@@ -14,10 +14,18 @@
 
 package com.project.demo.service.impl;
 
+import com.project.demo.model.Product;
 import com.project.demo.service.base.ProductServiceBaseImpl;
+
+import java.util.List;
 
 /**
  * @author Brian Wing Shun Chan
  */
 public class ProductServiceImpl extends ProductServiceBaseImpl {
+
+    public List<Product> getProductsByGender(String gender) {
+        return productLocalService.getProductsByGender(gender);
+    }
+
 }

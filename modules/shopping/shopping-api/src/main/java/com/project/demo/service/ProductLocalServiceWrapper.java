@@ -265,6 +265,13 @@ public class ProductLocalServiceWrapper
 		return _productLocalService.getProducts(start, end);
 	}
 
+	@Override
+	public java.util.List<com.project.demo.model.Product> getProductsByGender(
+		String gender) {
+
+		return _productLocalService.getProductsByGender(gender);
+	}
+
 	/**
 	 * Returns the number of products.
 	 *

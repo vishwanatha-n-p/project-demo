@@ -14,10 +14,24 @@
 
 package com.project.demo.service.impl;
 
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.project.demo.model.Product;
+import com.project.demo.service.ProductLocalServiceUtil;
 import com.project.demo.service.base.ProductLocalServiceBaseImpl;
+
+import java.util.List;
 
 /**
  * @author Brian Wing Shun Chan
  */
 public class ProductLocalServiceImpl extends ProductLocalServiceBaseImpl {
+
+    public List<Product> getProductsByGender(String gender) {
+        DynamicQuery dynamicQuery = ProductLocalServiceUtil.dynamicQuery();
+        dynamicQuery.add(PropertyFactoryUtil.forName("gender").eq(gender));
+        List<Product> products = ProductLocalServiceUtil.dynamicQuery(dynamicQuery);
+        return products;
+    }
+
 }

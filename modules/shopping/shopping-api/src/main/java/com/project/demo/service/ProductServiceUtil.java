@@ -14,6 +14,10 @@
 
 package com.project.demo.service;
 
+import com.project.demo.model.Product;
+
+import java.util.List;
+
 /**
  * Provides the remote service utility for Product. This utility wraps
  * <code>com.project.demo.service.impl.ProductServiceImpl</code> and is an
@@ -39,8 +43,12 @@ public class ProductServiceUtil {
 	 *
 	 * @return the OSGi service identifier
 	 */
-	public static java.lang.String getOSGiServiceIdentifier() {
+	public static String getOSGiServiceIdentifier() {
 		return getService().getOSGiServiceIdentifier();
+	}
+
+	public static List<Product> getProductsByGender(String gender) {
+		return getService().getProductsByGender(gender);
 	}
 
 	public static ProductService getService() {

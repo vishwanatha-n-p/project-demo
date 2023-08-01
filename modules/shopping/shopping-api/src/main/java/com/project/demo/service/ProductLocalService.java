@@ -232,6 +232,9 @@ public interface ProductLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<Product> getProducts(int start, int end);
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<Product> getProductsByGender(String gender);
+
 	/**
 	 * Returns the number of products.
 	 *

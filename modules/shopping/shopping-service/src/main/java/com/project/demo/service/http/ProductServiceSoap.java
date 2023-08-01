@@ -14,9 +14,16 @@
 
 package com.project.demo.service.http;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import com.project.demo.service.ProductServiceUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
- * <code>com.project.demo.service.ProductServiceUtil</code> service
+ * <code>ProductServiceUtil</code> service
  * utility. The static methods of this class call the same methods of the
  * service utility. However, the signatures are different because it is
  * difficult for SOAP to support certain types.
@@ -54,4 +61,24 @@ package com.project.demo.service.http;
  * @generated
  */
 public class ProductServiceSoap {
+
+	public static com.project.demo.model.ProductSoap[] getProductsByGender(
+			String gender)
+		throws RemoteException {
+
+		try {
+			java.util.List<com.project.demo.model.Product> returnValue =
+				ProductServiceUtil.getProductsByGender(gender);
+
+			return com.project.demo.model.ProductSoap.toSoapModels(returnValue);
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(ProductServiceSoap.class);
+
 }

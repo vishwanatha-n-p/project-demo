@@ -246,6 +246,10 @@ public class ProductLocalServiceUtil {
 		return getService().getProducts(start, end);
 	}
 
+	public static List<Product> getProductsByGender(String gender) {
+		return getService().getProductsByGender(gender);
+	}
+
 	/**
 	 * Returns the number of products.
 	 *

@@ -41,6 +41,13 @@ public class ProductServiceWrapper
 	}
 
 	@Override
+	public java.util.List<com.project.demo.model.Product> getProductsByGender(
+		String gender) {
+
+		return _productService.getProductsByGender(gender);
+	}
+
+	@Override
 	public ProductService getWrappedService() {
 		return _productService;
 	}
