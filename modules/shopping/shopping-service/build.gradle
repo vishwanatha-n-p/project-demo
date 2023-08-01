@@ -1,5 +1,5 @@
 dependencies {
-	compile project(":modules:shopping:shopping-api")
+	compileOnly project(":modules:shopping:shopping-api")
 
 }
 
